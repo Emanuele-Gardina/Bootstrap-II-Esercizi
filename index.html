@@ -11,58 +11,310 @@
       crossorigin="anonymous"
     />
   </head>
-  <body>
-    <div class="container">
-      <div class="row">
-        <div class="col-12 sm-6 md-4 xl-2">
-          <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#">Navbar</a>
-              <button
-                class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-              >
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active" href="#">Saldi</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Welcome Summer</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Last Minute</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Recensioni</a>
-                  </li>
-                </ul>
 
-                <form class="d-flex" role="search">
-                  <input
-                    class="form-control me-2"
-                    type="search"
-                    placeholder="Cerca posti da sogno"
-                    aria-label="Search"
-                  />
-                  <button class="btn btn-outline-danger" type="submit">Cerca</button>
-                </form>
-              </div>
-            </div>
-          </nav>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img
+            height="40"
+            src="https://seeklogo.com/images/E/Evelin_R_travel_agency-logo-F9A7A2958C-seeklogo.com.png"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto">
+            <!-- me-auto= Margin End: crea uno spazio dinamico a destra e spinge gli elementi a sinistra-->
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="visually-hidden-focusable">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#week-deal">Saldi</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#welcome-summer">Welcome Summer</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#last-minute">Last Minute</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#testimonials">Recensioni</a>
+            </li>
+          </ul>
+          <!-- d-flex imposta il layout come flexbox.
+            my-2 applica un margine verticale di 0.5rem su tutti i dispositivi.
+            my-lg-0 rimuove il margine verticale su schermi grandi (992px o superiori). -->
+          <form class="d-flex my-2 my-lg-0" role="search">
+            <input class="form-control me-2" type="search" placeholder="Cerca posti da sogno" aria-label="Search" />
+            <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Cerca</button>
+          </form>
         </div>
       </div>
+    </nav>
+
+    <div class="container">
+      <!-- text-center: Centra il testo su dispositivi piccoli e medi.
+      text-lg-start: Allinea il testo a sinistra su schermi grandi e oltre.
+      bg-light: Imposta uno sfondo chiaro.
+      rounded: Arrotonda gli angoli dell'elemento.
+      shadow-sm: Aggiunge una piccola ombra all'elemento.
+      p-5: Aggiunge un padding di 3rem su tutti i lati.
+      pt-4: Aggiunge un padding di 1.5rem nella parte superiore.
+      mt-5: Aggiunge un margine di 3rem nella parte superiore.-->
+      <div class="text-center text-lg-start bg-light rounded shadow-sm p-5 pt-4 mt-5">
+        <!-- display-1: Imposta una dimensione del font molto grande, adatta per un titolo importante.
+        d-inline-block: Imposta l'elemento come blocco in linea, permettendo di personalizzare dimensioni e margini ma mantenendo il comportamento di un elemento in linea.
+        text-muted: Colora il testo in grigio chiaro per renderlo meno prominente rispetto al resto del contenuto.
+        align-middle: Allinea verticalmente l'elemento al centro rispetto alla linea di base degli altri contenuti.-->
+        <h1 class="display-1 d-inline-block text-muted align-middle">Eveline-R</h1>
+        <!-- lead: Aumenta la dimensione del font per rendere il paragrafo più prominente (tipicamente usato per introduzioni o testi evidenti). 
+         mb-0: Rimuove il margine inferiore dal paragrafo, evitando spazi extra sotto di esso.-->
+        <p class="lead d-inline-block mb-0 align-middle">— Feel the Freedom</p>
+        <hr class="my-2" />
+        <p class="fs-3 fst-italic text-muted mb-5">Scopri le destinazioni più calde del momento!</p>
+        <a class="btn btn-info btn-lg px-5 fw-bold text-light" href="#day-deal" role="button">Prenota ora</a>
+      </div>
     </div>
+    <section class="my-5 d-flex flex-column" id="week-deal">
+      <div class="d-flex justify-content-between">
+        <h3>Saldi</h3>
+        <button
+          type="button"
+          class="btn btn-sm btn-outline-info border-0 align-self-center mb-4"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapseWeekDeal"
+          aria-expanded="false"
+          aria-controls="collapseExample"
+        >
+          Nascondi sezione
+        </button>
+      </div>
+      <div class="row collapse show g-2 g-md-3 g-xl-5" id="collapseWeekDeal">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card border border-2 border-info">
+            <img
+              src="https://cache.marriott.com/marriottassets/marriott/MLEWH/mlewh-wow-oceanhaven-1800-hor-wide.jpg?interpolation=progressive-bilinear&downsize=1440px:*"
+              class="card-img-top"
+              alt="maldives"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Titolo</h5>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia et possimus aliquid deserunt veritatis
+                natus ullam perspiciatis temporibus minima repudiandae!
+              </p>
+              <a href="#" class="btn btn-info">Prenota</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card border border-2 border-info">
+            <img
+              src="https://cache.marriott.com/marriottassets/marriott/MLEWH/mlewh-wow-oceanhaven-1800-hor-wide.jpg?interpolation=progressive-bilinear&downsize=1440px:*"
+              class="card-img-top"
+              alt="maldives"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Titolo</h5>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia et possimus aliquid deserunt veritatis
+                natus ullam perspiciatis temporibus minima repudiandae!
+              </p>
+              <a href="#" class="btn btn-info">Prenota</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card border border-2 border-info">
+            <img
+              src="https://cache.marriott.com/marriottassets/marriott/MLEWH/mlewh-wow-oceanhaven-1800-hor-wide.jpg?interpolation=progressive-bilinear&downsize=1440px:*"
+              class="card-img-top"
+              alt="maldives"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Titolo</h5>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia et possimus aliquid deserunt veritatis
+                natus ullam perspiciatis temporibus minima repudiandae!
+              </p>
+              <a href="#" class="btn btn-info">Prenota</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-md-none d-lg-block">
+          <div class="card border border-2 border-info">
+            <img
+              src="https://cache.marriott.com/marriottassets/marriott/MLEWH/mlewh-wow-oceanhaven-1800-hor-wide.jpg?interpolation=progressive-bilinear&downsize=1440px:*"
+              class="card-img-top"
+              alt="maldives"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Titolo</h5>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia et possimus aliquid deserunt veritatis
+                natus ullam perspiciatis temporibus minima repudiandae!
+              </p>
+              <a href="#" class="btn btn-info">Prenota</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="my-5 d-flex flex-column" id="welcome-summer">
+      <div class="d-flex justify-content-between">
+        <h3>Welcome Summer</h3>
+        <button
+          type="button"
+          class="btn btn-sm btn-outline-info border-0 align-self-center mb-4"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapseWelcomeSummer"
+          aria-expanded="false"
+          aria-controls="collapseExample"
+        >
+          Nascondi sezione
+        </button>
+      </div>
+      <div class="row collapse show" id="collapseWelcomeSummer">
+        <div class="col-12 col-sm-6 col-xl-4 mb-4">
+          <div class="card shadow-lg border-0">
+            <img
+              src="https://cache.marriott.com/marriottassets/marriott/MLEWH/mlewh-wow-oceanhaven-1800-hor-wide.jpg?interpolation=progressive-bilinear&downsize=1440px:*"
+              class="card-img-top"
+              alt="maldives"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Titolo</h5>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia et possimus aliquid deserunt veritatis
+                natus ullam perspiciatis temporibus minima repudiandae!
+              </p>
+              <a href="#" class="btn btn-info">Prenota</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-xl-4 mb-4">
+          <div class="card shadow-lg border-0">
+            <img
+              src="https://cache.marriott.com/marriottassets/marriott/MLEWH/mlewh-wow-oceanhaven-1800-hor-wide.jpg?interpolation=progressive-bilinear&downsize=1440px:*"
+              class="card-img-top"
+              alt="maldives"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Titolo</h5>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia et possimus aliquid deserunt veritatis
+                natus ullam perspiciatis temporibus minima repudiandae!
+              </p>
+              <a href="#" class="btn btn-info">Prenota</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-xl-4 mb-4">
+          <div class="card shadow-lg border-0">
+            <img
+              src="https://cache.marriott.com/marriottassets/marriott/MLEWH/mlewh-wow-oceanhaven-1800-hor-wide.jpg?interpolation=progressive-bilinear&downsize=1440px:*"
+              class="card-img-top"
+              alt="maldives"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Titolo</h5>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia et possimus aliquid deserunt veritatis
+                natus ullam perspiciatis temporibus minima repudiandae!
+              </p>
+              <a href="#" class="btn btn-info">Prenota</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-xl-4 mb-4">
+          <div class="card shadow-lg border-0">
+            <img
+              src="https://cache.marriott.com/marriottassets/marriott/MLEWH/mlewh-wow-oceanhaven-1800-hor-wide.jpg?interpolation=progressive-bilinear&downsize=1440px:*"
+              class="card-img-top"
+              alt="maldives"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Titolo</h5>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia et possimus aliquid deserunt veritatis
+                natus ullam perspiciatis temporibus minima repudiandae!
+              </p>
+              <a href="#" class="btn btn-info">Prenota</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-xl-4 mb-4">
+          <div class="card shadow-lg border-0">
+            <img
+              src="https://cache.marriott.com/marriottassets/marriott/MLEWH/mlewh-wow-oceanhaven-1800-hor-wide.jpg?interpolation=progressive-bilinear&downsize=1440px:*"
+              class="card-img-top"
+              alt="maldives"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Titolo</h5>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia et possimus aliquid deserunt veritatis
+                natus ullam perspiciatis temporibus minima repudiandae!
+              </p>
+              <a href="#" class="btn btn-info">Prenota</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-xl-4 mb-4">
+          <div class="card shadow-lg border-0">
+            <img
+              src="https://cache.marriott.com/marriottassets/marriott/MLEWH/mlewh-wow-oceanhaven-1800-hor-wide.jpg?interpolation=progressive-bilinear&downsize=1440px:*"
+              class="card-img-top"
+              alt="maldives"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Titolo</h5>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia et possimus aliquid deserunt veritatis
+                natus ullam perspiciatis temporibus minima repudiandae!
+              </p>
+              <a href="#" class="btn btn-info">Prenota</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="my-5 d-none d-sm-block" id="day-deal">
+      <h3 class="mb-4">Offerta del giorno</h3>
+
+      <div class="row">
+        <div class="col col-lg-8">
+          <img
+            src="https://cache.marriott.com/marriottassets/marriott/MLEWH/mlewh-wow-oceanhaven-1800-hor-wide.jpg?interpolation=progressive-bilinear&downsize=1440px:*"
+            class="img-fluid rounded shadow"
+            alt="maldives"
+          />
+        </div>
+        <div class="col col-lg-4">
+          <h3 class="display-4 lh-1">Fushifaru Maldives</h3>
+          <p class="font-monospace text-muted">15.01.2021-31.01.2021</p>
+          <p class="lead">
+            Ville a partire da 500 €,<br />
+            non fartele sfuggire!
+          </p>
+          <span class="badge rounded-pill text-bg-dark">Best offer</span>
+        </div>
+      </div>
+    </section>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
